@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Discussion app with DOM</title>
+        <style>
+            body{
+                width:100%;
+                height:100%;
+                padding:0px;
+                margin:0px;
+            }
+            .nav{
+                background:darkcyan;
+                color:White;
+                width:100%;
+                height:40px;
+            }
+            h1{
+                padding-top:3px;
+                padding-left:5px;
+                padding-bottom:3px;
+            }
+            .pane{
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                height:95%;
+            }
+            #left{
+                border-right:2px solid 	#A9A9A9;
+            }
+            #right, #left{
+                padding-top:10px;
+            }
+            #right{
+                padding:20px;
+            }
+            #ques_submit, #response_submit, #resolve{
+                float:right;
+            }
+            input, textarea{
+                display:block;
+                font-size:20px;
+                margin-bottom:10px;
+            }
+            button{
+                display:block;
+                padding:5px;
+                font-size:15px;
+                background:blue;
+                color:White;
+                cursor:pointer;
+                border-radius:5px;
+            }
+            #ques{
+                height:90%;
+                background:#F0F0F0;
+                border-top:2px solid #A9A9A9;
+            }
+            #new_ques{
+                display:inline;
+                margin-right:20px;
+            }
+            #search{
+                display:inline;
+            }
+            textarea{
+                width:100%;
+                resize:none;
+            }
+            #response_form{
+                display:none;
+                color:	#A9A9A9;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "nav">
+            <h1>Discussions portal</h1>
+        </div>
+        <div class="pane">
+            <div id="left">
+                <div id="left_up">
+                    <button id="new_ques">New question form</button>
+                    <input  type="search" id="search" placeholder="search questions..."/>
+                </div>
+                <div id="ques"></div>
+            </div>
+            <div id="right">
+                <div id="ques_form">
+                    <h2>Welcome to discussion portal</h2>
+                    <h4>Enter a question to get started</h4>
+                    <input id="ques_sub" placeholder="subject"/>
+                    <textarea id="question" placeholder="question" rows=5></textarea>
+                    <button id="ques_submit">Submit</button>
+                </div>
+                <div id="response_form">
+                    <h3>Question</h3>
+                    <div id="quest"></div>
+                    <button id="resolve">Resolve</button>
+                    <br/>
+                    <h4>Response</h4>
+                    <div id="responses"></div>
+                    <h3>Add response</h3>
+                    <input id="res_name" placeholder="Enter name"/>
+                    <textarea id="res_comment" placeholder="Enter comment" rows=5></textarea>
+                    <button id="response_submit">Submit</button>
+                </div>
+            </div>
+        <div>
+    </body>
+    <script src="script.js"></script>
+</html>
+</html>
+</html>
